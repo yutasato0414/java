@@ -1,3 +1,5 @@
+package sample;
+
 public class RecorderRunner {
     public static void main(String[] args) {
         Recorder recorder = new Recorder();

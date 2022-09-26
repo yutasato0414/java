@@ -1,3 +1,5 @@
+package sample;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,7 +12,7 @@ public class TextReader {
     private static Logger logger = Logger.getLogger(TextReader.class.getName());
 
     public enum Mark {
-            START,END
+        START, END
     };
 
     private TextReader(String path) {
@@ -20,17 +22,16 @@ public class TextReader {
     private void execute() {
         List<Integer> valueList = new ObjectList<>();
 
-        try (FileReader fr = new FileReader(path);
-        BufferedReader br =new BufferedReader(fr)) {
+        try (FileReader fr = new FileReader(path); BufferedReader br = new BufferedReader(fr)) {
             String line = null;
             while ((line = br.readLine()) != null) {
                 valueList.add(Integer.parseInt(line));
             }
         } catch (IOException e) {
-                e.printStackTrace();
-        }  
-        
-        for(Integer value : valueList){
+            e.printStackTrace();
+        }
+
+        for (Integer value : valueList) {
             System.out.println(value);
         }
     }

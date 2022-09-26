@@ -1,12 +1,14 @@
-public class GenderSpeaker{
+package sample;
 
-        public static void main(String[] args){
-                doSpeak(new Man());
+public class GenderSpeaker {
 
-                doSpeak(new Woman());
-        }
+    public static void main(String[] args) {
+        doSpeak(new Man());
 
-        public static void doSpeak(AbstractPerson person){
-               person.speak();
-        }
+        doSpeak(new Woman());
+    }
+
+    public static void doSpeak(AbstractPerson person) {
+        person.speak();
+    }
 }
